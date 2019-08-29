@@ -6,7 +6,7 @@ Install  Tensorflow
 ----------------------------------
 pip install tensorflow==2.0.0-rc0 
 
-Install CNTK 
+Install Keras
 ----------------------------------
 pip install keras
 
