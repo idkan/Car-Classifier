@@ -1,15 +1,28 @@
-# Car-Classifier
-Python Machine Learning using CNN
+# Car Classifier
 
+Python Machine Learning using CNN for the recognition of car models.
 
-Install  Tensorflow
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Installing Requirements
+
+To install requirements.txt run:
+
+```
+pip install -r requirements.txt
+```
 ----------------------------------
-pip install tensorflow==2.0.0-rc0 
 
-Install Keras
+## Authors
+
+*Lopez Vásquez Luis Gerardo
+*Lozano López Jesús Adrián
+*Sesrena Aranda Jorge Abraham
+*Sosriano Cáceres Jorge
+
 ----------------------------------
-pip install keras
 
-1.- Import Library.
-2.- Set memory on memory.
-3.- Create tags
+
+
