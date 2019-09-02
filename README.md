@@ -17,10 +17,10 @@ pip install -r requirements.txt
 
 ## Authors
 
-*Lopez Vásquez Luis Gerardo
-*Lozano López Jesús Adrián
-*Sesrena Aranda Jorge Abraham
-*Sosriano Cáceres Jorge
+* Lopez Vásquez Luis Gerardo
+* Lozano López Jesús Adrián
+* Sesrena Aranda Jorge Abraham
+* Sosriano Cáceres Jorge
 
 ----------------------------------
 
