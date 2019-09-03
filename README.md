@@ -19,8 +19,8 @@ pip install -r requirements.txt
 
 * Lopez Vásquez Luis Gerardo
 * Lozano López Jesús Adrián
-* Sesrena Aranda Jorge Abraham
-* Sosriano Cáceres Jorge
+* Serena Aranda Jorge Abraham
+* Soriano Cáceres Jorge
 
 ----------------------------------
 
