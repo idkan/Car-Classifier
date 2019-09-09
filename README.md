@@ -6,6 +6,10 @@ Python Machine Learning using CNN for the recognition of car models.
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
+### Setup Python Version
+
+Python=3.6.8
+
 ### Installing Requirements
 
 To install requirements.txt run:
