@@ -32,16 +32,15 @@ for root, dirnames, filenames in os.walk(imgPath):
             images.append(image)
             count += 1
 
-            if prevRoot != root:
-                print(root,count)
-                prevRoot = root
-                directories.append(root)
-                directoriesCount.append(count)
-                count = 0
+    if prevRoot != root :
+        print(root,count)
+        prevRoot = root
+        directories.append(root)
+        directoriesCount.append(count)
+        count = 0
 directoriesCount.append(count)
 
 directoriesCount = directoriesCount[1:]
-directoriesCount[0] = directoriesCount[0] + 1
 print(f'Directorios leidos: {len(directories)}')
 print(f'Imagenes en directorios: {directoriesCount}')
 print(f'Imagenes totales: {sum(directoriesCount)}')
