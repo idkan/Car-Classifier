@@ -44,3 +44,31 @@ directoriesCount = directoriesCount[1:]
 print(f'Directorios leidos: {len(directories)}')
 print(f'Imagenes en directorios: {directoriesCount}')
 print(f'Imagenes totales: {sum(directoriesCount)}')
+
+
+labels = []
+index = 0
+
+for count in directoriesCount:
+    for i in range(count):
+        labels.append(index)
+        index += 1
+printf(f'Etiquedas creadas: {len(labels)}')
+
+marcas = []
+index = 0
+for directory in directories:
+    name = directory.split(os.sep)
+    print(index, name[len(name)-1])
+    marcas.append(name[len(name)-1])
+    index += 1
+
+y = np.array(labels)
+x = np.array(images, dtype=np.unit8)
+
+classes = np.unique(y)
+nClasses = len(classes)
+print(f'Total de etiquetas: {nClasses}')
+print(f'Asignación de etiquetas: {classes}')
+
+
