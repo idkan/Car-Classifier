@@ -1,4 +1,4 @@
-import numpy
+import numpy as np
 import os 
 import re
 import PIL
@@ -53,7 +53,7 @@ for count in directoriesCount:
     for i in range(count):
         labels.append(index)
         index += 1
-printf(f'Etiquedas creadas: {len(labels)}')
+print(f'Etiquedas creadas: {len(labels)}')
 
 marcas = []
 index = 0
