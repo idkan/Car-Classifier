@@ -16,13 +16,21 @@ class Curator(object):
 
         for path, subdir, files in os.walk(self.directory):
             mappedPaths.append(path)
-            os.makedir(path + "_resized", mode=0o777) #AAAAAAAAAAAAAAAAAAAAAAAA que pdo
+            
 
-        mappedPaths.pop(0) #REMOVER EL DIR 0
+
+        mappedPaths.pop(0) 
 
         print(mappedPaths)
 
-        for path in mappedPaths:        
+        for path in mappedPaths:     
+
+            try:
+                os.makedirs(path + '_resized')
+            except OSError as e:
+                if e.errno != errno.EEXIST:
+                    raise
+
             for paths, subdirs, files in os.walk(path):
                 for image in files:
                     images.append("\\" + str(image))
@@ -57,11 +65,7 @@ class Curator(object):
             print ("cannot resize '%s'" % myFile)
 
 
-    def grayScale(self, file):
-
-        return 0
-
-    def curate():
+    def curate(self):
 
         self.mapDir()
 
@@ -71,9 +75,9 @@ class Curator(object):
 
 def main():
 
-    datasetCurator = Curator("./assets/media/car_data/train/AAA", 300)
+    datasetCurator = Curator("./assets/media/car_data/train", 300)
 
-    print(datasetCurator.mapDir())
+    print(datasetCurator.curate())
 
 
 if __name__ == '__main__':
