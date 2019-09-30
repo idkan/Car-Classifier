@@ -26,7 +26,7 @@ class Curator(object):
         for path in mappedPaths:     
 
             try:
-                os.makedirs(path + '_resized')
+                os.makedirs(path + '_resized100')
             except OSError as e:
                 if e.errno != errno.EEXIST:
                     raise
@@ -54,10 +54,11 @@ class Curator(object):
         outfile = originalPath + "_resized" + str(myFile)
         try:
             im = Image.open(str(originalPath) + myFile)
-            wpercent = (basewidth/float(im.size[0]))
-            hsize = int((float(im.size[1])*float(wpercent)))
+            #wpercent = (basewidth/float(im.size[0]))
+            #hsize = int((float(im.size[1])*float(wpercent)))
 
-            im = im.resize((basewidth,hsize), Image.ANTIALIAS)
+            #im = im.resize((basewidth,hsize), Image.ANTIALIAS)
+            im = im.resize((basewidth, basewidth), Image.ANTIALIAS)
             
             im.save(outfile, "JPEG", optimize = True)
 
@@ -75,7 +76,7 @@ class Curator(object):
 
 def main():
 
-    datasetCurator = Curator("./assets/media/car_data/train", 300)
+    datasetCurator = Curator("./assets/media/car_data/train", 100)
 
     print(datasetCurator.curate())
 
